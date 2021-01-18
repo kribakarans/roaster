@@ -68,3 +68,19 @@ int reverse(node_t *head)
 	}
 }
 ```
+3. What is dangling pointer?
+```
+
+int a;
+static int b;
+
+int main()
+{
+	static int c;
+	char *ptr = (char *)malloc(10);
+
+	free(ptr);
+
+	ptr ///
+}
+```
