@@ -1,4 +1,4 @@
-1. Added node in sorted list
+**1. Added node in sorted list**
 ```
 
 typedef struct node {
@@ -40,7 +40,7 @@ node_t *add_node(node_t *head, int data)
 
 }
 ```
-2. Reversing doubly linked list
+**2. Reversing doubly linked list**
 ```
 typedef struct node {
 	struct node *next;
@@ -68,7 +68,7 @@ int reverse(node_t *head)
 	}
 }
 ```
-3. What is dangling pointer?
+**3. What is dangling pointer?**
 ```
 
 int a;
