@@ -85,25 +85,25 @@ int main()
 }
 ```
 
-what if dest mac is not match in switch and router ?
-fragmentation in ip stack ?
-what if frame exceeds the mtu size ?
-	if fragmentation enable, the frame get fragment
-max port no ?
-can we set own client port no ?
-what listen will do ?
-	monitor incomming req and create passive sockets
-How global values are acceseddd in parent and child ?
-how mutex values in acccess by two process (bcz two procs are not communicate) ?
-is static varible with same name is cause compilation error ?
-when global variables get resolve ?
-need of volatile with compiler flag O0 ?
-	need to remove optimization for specific variable
-memory barrier in kernel
-net filters
-TCP handshake 
-packet lifecycle
-how stp select root node ? based on mac addr
-diff snmp walk and bulk walk
-trap and alram
+what if dest mac is not match in switch and router ?<br>
+fragmentation in ip stack ?<br>
+what if frame exceeds the mtu size ?<br>
+	if fragmentation enable, the frame get fragment<br>
+max port no ?<br>
+can we set own client port no ?<br>
+what listen will do ?<br>
+	monitor incomming req and create passive sockets<br>
+How global values are acceseddd in parent and child ?<br>
+how mutex values in acccess by two process (bcz two procs are not communicate) ?<br>
+is static varible with same name is cause compilation error ?<br>
+when global variables get resolve ?<br>
+need of volatile with compiler flag O0 ?<br>
+	need to remove optimization for specific variable<br>
+memory barrier in kernel<br>
+net filters<br>
+TCP handshake<br>
+packet lifecycle<br>
+how stp select root node ? based on mac addr<br>
+diff snmp walk and bulk walk<br>
+trap and alram<br>
 need of makefile
