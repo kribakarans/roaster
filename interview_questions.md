@@ -106,4 +106,28 @@ packet lifecycle<br>
 how stp select root node ? based on mac addr<br>
 diff snmp walk and bulk walk<br>
 trap and alram<br>
-need of makefile
+need of makefile<br>
+
+
+set 0 to diagnal elements in multi-dimension matrix
+```
+int nullit(int arr[][], size_t size)
+{
+	int i = 0;
+	int j = 0;
+	
+	for(i = 0; i < size; i++) {
+		for (j = 0; j < size; j++) {
+			if ((i == j) || ((i == 0) && (j == size -1)) || ((i == size - 1) && (j = 0)) {
+				arr[i][j] = 0;
+			}
+		}
+	}
+}
+
+will work only for 3x3
+```
+
+remove node only with node pointer. (no reference to head pointer)
+memory segment
+
