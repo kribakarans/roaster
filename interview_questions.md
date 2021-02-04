@@ -180,7 +180,7 @@ int func (struct node *list)
 	return 0;
 }
 ```
-What are all the restrictions for writing the kernel modules?
-	could not use printf, malloc will use kprintf and kmalloc
-How host know its IP?
-How router know its own packets becuase it does not have routing table for that.
+What are all the restrictions for writing the kernel modules?<br>
+	could not use printf, malloc will use kprintf and kmalloc<br>
+How host know its IP?<br>
+How router know its own packets becuase it does not have routing table for that.<br>
