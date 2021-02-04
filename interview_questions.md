@@ -131,3 +131,52 @@ will work only for 3x3
 remove node only with node pointer. (no reference to head pointer)
 memory segment
 
+List program
+```
+take ll reverse 
+
+a b c d e f g h
+a h c f e d g b
+
+___ func()
+
+int func (struct node *list)
+{
+    int i = 0, j = 0;
+    struct node *current = NULL;
+    strcu node *end = NULL;
+    
+    if (list == NULL) {
+        return -1; //null head
+    }
+
+    current = list;
+  
+    while(current != NULL) {
+        current = current->next;
+    }
+   
+    end = current; //points end node
+    
+    current = list; //resetting first node
+	
+    while (current != NULL) {
+        if (current->next != NULL) {
+            new = end;
+            end->prev->next = current->next;
+			if (end->prev->prev != NULL) {
+				end = end->prev->prev;
+			}	
+            new->next = current->next->next;
+            new->prev = current;
+            current->next = new;
+            
+            if (current->next->next != NULL) {
+				current = current->next->next;
+			}
+        }
+    }
+	
+	return 0;
+}
+```
