@@ -184,3 +184,11 @@ What are all the restrictions for writing the kernel modules?<br>
 	could not use printf, malloc will use kprintf and kmalloc<br>
 How host know its IP?<br>
 How router know its own packets becuase it does not have routing table for that.<br>
+how vlagrind reports memory leak and how it know?<br>
+how malloc works and its memory header?<br>
+What symbol table consists?<br>
+what is ELF and what it consists?<br>
+What is best data-structure to maintain routing table?<br>
+Type of IPC<br>
+Diff of Socket and Shared Memory<br>
+Ethernet field<br>
