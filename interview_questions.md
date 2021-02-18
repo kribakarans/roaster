@@ -192,3 +192,72 @@ What is best data-structure to maintain routing table?<br>
 Type of IPC<br>
 Diff of Socket and Shared Memory<br>
 Ethernet field<br>
+Swap bit from x to y<br>
+```
+num = 1011101110111011
+ans   1011111111111011
+
+mask = 111111111111111
+a = 111111111111000
+b = 111110000000000
+mask = a^b = 0000001111111000
+ans = num | mask
+ans   1011111111111011
+```
+Remove duplicates in a list: 
+- dont use loop
+- can use merge sort to remove dups (not suitable for the list does not require sorting)
+- can use hashing
+```
+1-->2-->2-->3
+1-->2-->3
+
+1-->1-->2-->3-->2
+1-->2-->3
+
+struct node {
+    struct node *next;
+    int data;
+};
+
+int remove_dups(struct node *list)
+{
+    int retavl = -1;
+    struct node *curr = NULL;
+    struct node *next = NULL;
+    struct node *tmp = NULL;
+    
+    do {
+        if (list == NULL) {
+            fprintf(stderr, "list is null\n");
+            retval = -1;
+            break; 
+        }
+
+        while(curr != NULL) {
+            curr = list;
+            next = curr->next;
+
+            while(next != NULL) {
+                if (curr->data == next->data) {
+                    //remove duplicate node
+                    curr->next = next->next;
+                    free(
+                }
+            }
+        }
+
+        if (curr->next == NULL) {
+            /* list has only one element. and no duplicates. */
+            fprintf(stderr, "only one element\n");
+            retval = 0;
+            break; 
+        } else {
+            next =
+
+        }
+    } while(0);
+
+    return retval;
+}
+```
