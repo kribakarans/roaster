@@ -261,3 +261,32 @@ int remove_dups(struct node *list)
     return retval;
 }
 ```
+Where the shared memory will create memory?
+--user space memory in file system as a file.
+How to create the new process?
+--- fork and exec
+Diff process and threads.
+Ret val of fork()
+How to insert a new module in kernel?
+--- insmod and modprobe
+What are the fields will change in a packet from Router to switch?
+---Source and dest MAC, Checksum and TTL.
+Program to return array of structure and how to chk the return value?
+Output of below code 
+```
+int *ptr=NULL;
+ptr=ptr+1;
+printf("%d\n",ptr);
+```
+Ahow to access the a[2][2] in pointer method in below array?
+```
+123
+456
+789
+```
+Memory layouts
+Use of static variables
+Where the memory is allocated for Extern variable
+Type of sockets?
+---Sytream(TCP) and Datagram(UDP) and also we have Raw socket (ICMP)
+What is deadlock
