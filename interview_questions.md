@@ -290,3 +290,98 @@ Where the memory is allocated for Extern variable
 Type of sockets?
 ---Sytream(TCP) and Datagram(UDP) and also we have Raw socket (ICMP)
 What is deadlock
+
+Output of below code:
+```
+main()
+{
+    const int q = 5;
+    int const* p = &q; 
+
+    *p = 7;
+    printf ("%d", *p);        
+    
+    return 0;
+ }
+```
+Program for below matric
+```
+1
+1 1
+1 2 1
+1 3 3 1
+1 4 6 4 1
+1 5 10 10 5 1
+```
+Memory pattern of little endian and big endian
+List to check palindrom
+```
+
+NULL <-- 1 <--> 0 <--> 1 <--> 0 <--> 1 --> NULL
+
+2 1 2 2 1
+    1 2 3
+
+
+fun(struct node *list)
+{
+	strcut node *tmp = NULL;
+	strcut node *last = NULL;
+
+	if (list == NULL) {
+		return -1; //empty list
+	}
+
+	tmp = list;
+	while(tmp->next != NULL) {
+		tmp = tmp->next;
+	}
+
+	last = tmp;
+	tmp = list;
+
+	while(tmp != NULL) {
+		if (tmp->data != last->data) {
+			return -1; // list is not a palindrome
+		}
+		tmp = tmp->next;
+		last = last->prev;
+	}
+
+	return 0;
+}
+```
+Consequtive dynamic allocation for multi-dimension array
+```
+struct node {
+	struct node *next;
+	struct node *prev;
+	int data;
+};
+
+int main()
+{
+	//char a[2][5];
+
+	char **b = NULL;
+	int r = 2; c = 5;
+
+	b = (char **)malloc(size);
+	if (b == NULL) {
+		perror("malloc failed");
+		return -1;
+	}
+
+	while(i < r) {
+		b[i] = malloc(c * sizeof (**b));
+		if (b[i] == NULL) {
+			perror("malloc failed");
+			return -1;
+		}
+		i++;
+	}
+}
+```
+Ethernet frame fields
+Packet travel between  ```host -- switch --- host``` and ```host --- router --- host```.
+
