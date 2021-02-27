@@ -261,37 +261,37 @@ int remove_dups(struct node *list)
     return retval;
 }
 ```
-Where the shared memory will create memory?
---user space memory in file system as a file.
-How to create the new process?
---- fork and exec
-Diff process and threads.
-Ret val of fork()
-How to insert a new module in kernel?
---- insmod and modprobe
-What are the fields will change in a packet from Router to switch?
----Source and dest MAC, Checksum and TTL.
-Program to return array of structure and how to chk the return value?
+Where the shared memory will create memory?<br>
+--user space memory in file system as a file.<br>
+How to create the new process?<br>
+--- fork and exec<br>
+Diff process and threads.<br>
+Ret val of fork()<br>
+How to insert a new module in kernel?<br>
+--- insmod and modprobe<br>
+What are the fields will change in a packet from Router to switch?<br>
+---Source and dest MAC, Checksum and TTL.<br>
+Program to return array of structure and how to chk the return value?<br>
 Output of below code 
 ```
 int *ptr=NULL;
 ptr=ptr+1;
 printf("%d\n",ptr);
 ```
-Ahow to access the a[2][2] in pointer method in below array?
+Ahow to access the a[2][2] in pointer method in below array?<br>
 ```
 123
 456
 789
 ```
-Memory layouts
-Use of static variables
-Where the memory is allocated for Extern variable
-Type of sockets?
----Sytream(TCP) and Datagram(UDP) and also we have Raw socket (ICMP)
-What is deadlock
+Memory layouts<br>
+Use of static variables<br>
+Where the memory is allocated for Extern variable<br>
+Type of sockets?<br>
+---Sytream(TCP) and Datagram(UDP) and also we have Raw socket (ICMP)<br>
+What is deadlock<br>
 
-Output of below code:
+Output of below code:<br>
 ```
 main()
 {
@@ -304,7 +304,7 @@ main()
     return 0;
  }
 ```
-Program for below matric
+Program for below matric<br>
 ```
 1
 1 1
@@ -313,8 +313,8 @@ Program for below matric
 1 4 6 4 1
 1 5 10 10 5 1
 ```
-Memory pattern of little endian and big endian
-List to check palindrom
+Memory pattern of little endian and big endian<br>
+List to check palindrom<br>
 ```
 
 NULL <-- 1 <--> 0 <--> 1 <--> 0 <--> 1 --> NULL
@@ -382,6 +382,6 @@ int main()
 	}
 }
 ```
-Ethernet frame fields
+Ethernet frame fields<br>
 Packet travel between  ```host -- switch --- host``` and ```host --- router --- host```.
 
