@@ -68,7 +68,7 @@ int reverse(node_t *head)
 	}
 }
 ```
-**3. What is dangling pointer?**
+**3. What is dangling pointer?** <br>
 A pointer pointing to a memory location that has been deleted (or freed) is called dangling pointer.
 
 ```
