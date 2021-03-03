@@ -68,7 +68,9 @@ int reverse(node_t *head)
 	}
 }
 ```
-**3. What is dangling pointer?**
+**3. What is dangling pointer?** <br>
+A pointer pointing to a memory location that has been deleted (or freed) is called dangling pointer.
+
 ```
 
 int a;
@@ -385,3 +387,7 @@ int main()
 Ethernet frame fields<br>
 Packet travel between  ```host -- switch --- host``` and ```host --- router --- host```.
 
+**How does free() know the size of memory to be deallocated?**
+
+When memory allocation is done, the actual heap space allocated is one word larger than the requested memory.<br> 
+The extra word is used to store the size of the allocation and is later used by free( ).
