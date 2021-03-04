@@ -44,6 +44,48 @@ node_t *add_node(node_t *head, int data)
 **Single Linked List add the node & insert the node in 1st, middle, last and position based sample programs** <br>
 
 ```
+#include<stdio.h>
+#include<stdlib.h>
+struct singly{
+	int data;
+	struct singly *next;
+}*head = NULL;
+
+void create(value)
+{
+	struct singly *new=NULL;
+	struct singly *temp=NULL;
+	if(head==NULL)
+	{
+		head =(struct singly *)malloc (sizeof(struct singly));
+		if(head==NULL)
+		{
+			printf("memory allocation failed!");
+			return;
+		}
+		else
+		{
+			head->data =value;
+			head->next =NULL;
+		}
+	}
+	else
+	{
+		temp =head;
+		while(temp->next!=NULL)
+		{
+			temp =temp->next;
+		}
+		new =(struct singly *)malloc (sizeof(struct singly));
+		if(new==NULL)
+		{
+			printf("memory allocation failed!");
+			return;
+		}
+		else
+		{
+			new->data=value;
+			new->next=NULL;
 
 			temp->next=new;
 		}
