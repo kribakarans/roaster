@@ -40,6 +40,241 @@ node_t *add_node(node_t *head, int data)
 
 }
 ```
+
+**Single Linked List add the node & insert the node in 1st, middle, last and position based sample programs** <br>
+
+```
+
+			temp->next=new;
+		}
+	}
+}
+void insert_first(int value)
+{
+
+	struct singly *new=NULL;
+	new =(struct singly *)malloc (sizeof(struct singly));
+	new->data =value;
+	new->next =head;
+	head =new;
+}
+void insert_last(int value)
+{
+
+	struct singly *temp=NULL;
+	struct singly *new=NULL;
+	temp =head;
+	while(temp->next!=NULL)
+	{
+		temp =temp->next;
+	}
+	new =(struct singly *)malloc (sizeof(struct singly));
+	new->data =value;
+	new->next =NULL;
+	temp->next =new;
+}
+void insert_middle(int value)
+{
+
+	struct singly *temp=NULL;
+	struct singly *new=NULL;
+	int count =0,posi=0;
+	temp =head;
+	while(temp->next!=NULL)
+	{
+		count++;
+		temp =temp->next;
+	}
+	count=count/2;
+	temp =head;
+	while(temp->next!=NULL)
+	{
+		temp =temp->next;
+		posi++;
+		if(count==posi)
+		{
+
+			new =(struct singly *)malloc (sizeof(struct singly));
+			new->data =value;
+			new->next =temp->next;
+			temp->next =new;
+		}
+	}
+}
+void insert_position(int value)
+{
+ struct singly *temp=NULL;
+	struct singly *new=NULL;
+	int count =0,posi=0;
+	printf("enter the position");
+	scanf("%d",&posi);
+	temp =head;
+	while(temp->next!=NULL)
+	{
+		temp =temp->next;
+		count++;
+		if(count==posi)
+		{
+
+			new =(struct singly *)malloc (sizeof(struct singly));
+			new->data =value;
+			new->next =temp->next;
+			temp->next =new;
+		}
+	}
+}
+void display()
+{
+	struct singly *temp =NULL;
+	temp=head;
+	while(temp!=NULL)
+	{
+		printf("%d->",temp->data);
+		temp=temp->next;
+
+	}
+	printf("NULL");
+}
+
+void main()
+{
+	create(10);
+	create(20);
+	create(30);
+	insert_first(100);
+	insert_last(300);
+	insert_middle(200);
+	insert_position(400);
+	display();
+}
+
+```
+
+**Find the duplicate in Single linked list** <br>
+```
+#include<stdio.h>
+#include<stdlib.h>
+struct get{
+	int data;
+	struct get *next;
+};
+struct get *h=NULL;
+struct get *head1=NULL;
+void create (int value)
+{
+	struct get *temp = NULL;
+	struct get *new = NULL;
+
+	if (h==NULL)
+	{
+		h = (struct get *)malloc (sizeof(struct get));
+		if (h==NULL)
+		{
+			printf ("memory allocation failed");
+			return;
+		}
+		else
+		{
+			h->data = value;
+			h->next = NULL;
+		}
+	}
+	else
+	{
+		temp = h;
+		while(temp->next!=NULL)
+		{
+			temp =temp->next ;
+		}
+		new = (struct get *)malloc (sizeof(struct get));
+		new->data = value;
+		new->next = NULL;
+		temp->next = new;
+	}
+
+}
+void sorting ()
+{
+
+	struct get *temp = NULL;
+	struct get *new = NULL;
+	int s;
+	temp =h;
+	while (temp!=NULL)
+	{
+		new = temp->next;
+		while (new!=NULL)
+		{
+			if (temp->data > new->data)
+			{
+				s = temp->data;
+				temp->data=new->data;
+				new->data=s;
+			}
+			new=new->next;
+		}
+		temp= temp->next;
+	}
+}
+void duplicate ()
+{
+
+	struct get *temp = NULL;
+	struct get *new = NULL;
+	struct get *s = NULL;
+	struct get *b = NULL;
+	int count =0;
+	temp =h;
+	//new = temp->next;
+	while (temp!=NULL)
+	{
+		new = temp->next;
+		while (new!=NULL)
+		{
+			if (temp->data ==  new->data)
+			{
+//				printf ("%d %d",temp->data,new->data);
+				s = new->next;
+				free (new);
+				new = s;
+//				printf (" %d ",temp->data);
+
+			}
+			else
+			{
+				new= new->next;
+			}
+		}
+		temp=temp->next;
+	}
+}
+void display ()
+{
+
+	struct get *temp = NULL;
+	int count =0,pos=0;
+	temp = h;
+	while(temp!=NULL)
+	{
+		printf("%d->",temp->data);
+
+		temp = temp->next;
+	}
+	printf("NULL");
+}
+void main()
+{
+	create(60);
+	create(20);
+	create(30);
+	create(70);
+	create(50);
+	create(10);
+	sorting ();
+	duplicate();
+	display();
+}
+```
 **2. Reversing doubly linked list**
 ```
 typedef struct node {
