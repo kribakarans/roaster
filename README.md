@@ -622,7 +622,6 @@ int main()
 Ethernet frame fields<br>
 Packet travel between  ```host -- switch --- host``` and ```host --- router --- host```.
 
-**How does free() know the size of memory to be deallocated?**
-
+**How does free() know the size of memory to be deallocated?**<br>
 When memory allocation is done, the actual heap space allocated is one word larger than the requested memory.<br> 
 The extra word is used to store the size of the allocation and is later used by free( ).
