@@ -627,3 +627,158 @@ Packet travel between  ```host -- switch --- host``` and ```host --- router --- 
 **How does free() know the size of memory to be deallocated?**<br>
 When memory allocation is done, the actual heap space allocated is one word larger than the requested memory.<br> 
 The extra word is used to store the size of the allocation and is later used by free( ).
+
+MAC learning<br>
+size of below strcuture
+```
+strcut iphdr {
+	unsingned int version:3;
+}
+```
+2D Array implementation<br>
+Traverse a node in BFS tree<br>
+```
+        10
+    4       23
+1      7  12    27
+
+1. Traverse and add the elements in Q
+10, 4, 23, 1, 7, 12, 27 
+
+2. Print the elements
+    10,
+ 4     23
+ ```
+Write a strcutre for IP packet<br>
+Set bits as per the passed petterns<br>
+```
+"1-2, 10-12"
+"10-12, 15, 18-20"
+
+
+int val;
+
+int set_bit_range(char *range)
+{
+	char *tok = NULL;
+	char *saveptr = NULL;
+	
+	tok = strtok_r(patter, "-", &saveptr);
+	while(tok != NULL) {
+		pos = atoi(tok);
+		val = val | ( 1 << pos - 1);
+		tok = strtok_r(NULL, "-", &saveptr);
+	}
+	
+	return 0;
+}
+
+
+int parse_and_setbit(char *pattern)
+{
+	char *tok = NULL;
+	char *saveptr = NULL;
+	
+	if (pattern == NULL) {
+		fprintf(stderr, "invalid pattern !\n");
+		return -1;
+	}
+
+	tok = strtok_r(patter, ",", &saveptr);
+	if (tok != NULL) {
+		retval = set_range(tok);
+		tok = strtok_r(NULL, ",", &saveptr);
+	}
+
+}
+```
+Set Nth bit<br>
+```
+int setbit(unsigned int val, unsigned int pos)
+{
+	int num = 0;
+	
+	if ((val < 0) || (pos <= 0)) {
+		return -1; //Error
+	}
+
+	num = val | (1 << (pos - 1));
+	
+	return num;
+	
+}
+```
+Print Endieness<br>
+```
+int print_endienes(void)
+{
+	int *a = 1;
+	
+	if ((char *)a == 0) {
+		printf("Little endian");
+	} else {
+		printf("Big endian");
+	}
+}
+```
+
+Count set bits<br>
+```
+int count_setbits(int val) {
+	int nbit = 0, i = 0;
+	int size = sizeof(val);
+	
+	while(i < (size * 8)) {
+		val = (val & ( 1 << i ));
+		if (val) {
+			nbit++;
+		}
+		
+		if (val == 0) {
+			break;
+		}
+		
+		i++;
+	}
+	
+	return nbit;
+}
+```
+
+STRREV:
+```
+
+
+
+str = "hello"
+
+char *strrev(char *str)
+{
+	char tmp = (char) 0;
+	char *st = NULL;
+	char *end = NULL;
+	
+	if (str == NULL) {
+		return NULL;
+	}
+
+	st = end = str;
+
+	while (end != '\0') {
+		end++;
+	}
+
+	end--;
+
+	while(st < end) {
+		tmp = *end;
+		end = *st;
+		st = tmp;
+		
+		st++;
+		end--;
+	}
+	
+	return str;
+}
+```
