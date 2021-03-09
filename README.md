@@ -782,7 +782,7 @@ char *strrev(char *str)
 	return str;
 }
 ```
-Diff AVL and Binary tree
+Diff AVL and Binary tree<br>
 Expression check
 ```
 #define MAX_SIZE 32
@@ -837,7 +837,6 @@ int experchk(char *data)
 
 List program
 ```
-
 8 1 3 
 9 1 2 
 7 3 5
