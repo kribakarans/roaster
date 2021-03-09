@@ -782,3 +782,108 @@ char *strrev(char *str)
 	return str;
 }
 ```
+Diff AVL and Binary tree
+Expression check
+```
+#define MAX_SIZE 32
+int experchk(char *data)
+{
+	char *ptr = NULL;
+	char stack[MAX_SIZE] = {0};
+	int sp = 0;
+
+	ptr = data;
+	while(*ptr != '\0') {
+		switch (*ptr) {
+			case '(': case '{': case '[':
+				//Push operation
+				stack[sp] = *ptr;
+				sp++;
+				break;
+
+			case ')':
+				--sp;
+				if (stack[sp] != '(') {
+					fprintf(stderr, "Invalid expression !\n");
+					return -1;
+				}
+				stack[sp] = 0;
+				break;
+ 
+			case ']':
+				--sp;
+				if (stack[sp] != ']') {
+					fprintf(stderr, "Invalid expression !\n");
+					return -1;
+				}
+				stack[sp] = 0;
+				break;
+
+ 			case '}':
+				--sp;
+				if (stack[sp] != '{') {
+					fprintf(stderr, "Invalid expression !\n");
+					return -1;
+				}
+				stack[sp] = 0;
+				break;
+		}
+		ptr++;
+	}
+
+	return retval;
+}
+```
+
+List program
+```
+
+8 1 3 
+9 1 2 
+7 3 5
+
+typecast struct node {
+	strcut node *next;
+	int data;
+} node_t;
+
+
+//Returning new list
+node_t add_list_element(node_t *list1, node_t *list2)
+{
+	node_t *l1 = NULL;
+	node_t *l2 = NULL;
+	node_t *newlist = NULL;
+	node_t *new = NULL;
+
+	if ((list1 == NULL) || (list2 == NULL)) {
+		fprintf(stderr, "invalid list !");
+		return -1;
+	}
+
+	l1 = list1;
+	l2 = list1;
+
+	while((l1 != NULL) && (l2 != NULL)) {
+		//Creating new list node
+		new = (node_t *)malloc(sizeof(*new));
+		if (new == NULL) {
+			perror("malloc failed for new node");
+			return -1;
+		}
+
+		if (newlist == NULL) {
+			newlist = new;
+			prev = NULL;
+		}
+
+		new->next = prev;
+		new->data = (l1->data + l2->data);
+
+		l1 = l1->next;
+		l2 = l2->next;
+	}
+
+	return newlist;
+}
+```
