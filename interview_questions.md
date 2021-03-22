@@ -668,3 +668,29 @@ Packet travel between  ```host -- switch --- host``` and ```host --- router --- 
 
 When memory allocation is done, the actual heap space allocated is one word larger than the requested memory.<br> 
 The extra word is used to store the size of the allocation and is later used by free( ).
+
+**1.what is the difference b/w structure and union?.
+  Ans: Struct-> The size of structure is equal or greater than sum of size of its members.
+ union-size of union is equal to the size of largetest member.
+ 
+ 2.what are the derived data types?.
+ 
+ Ans:Pointers, arrays, structures and unions are derived data types.
+ 
+ 3.How we can find out circular linked list or not?.
+ 4.Explain memory layout for c?.
+ 5.what is the size of below structure?.
+   struct str{
+     int a;
+	 char b;
+	 int c;
+	 char d;
+	 int e;
+   }
+   
+  6.In structure pading how to reduce the memory size?
+  7.if free(90)-random number---> what happend?
+  8.what is the use of stp?
+  9.what is the use of vlan? and explain?
+  10.what is the array?**
+  
