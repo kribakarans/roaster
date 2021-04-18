@@ -885,4 +885,118 @@ node_t add_list_element(node_t *list1, node_t *list2)
 
 	return newlist;
 }
+
+PALC:
+count set bits
+vlan tag packet 
+stp transition states
+diff alternate blocking and designated blocking
+diff mstp vs pstp
+internal and external fragmentation of memory
+snmp v2 and v3
+arp resolution worksp
+delete node from DLL
+selection sort
+reverse Single linked list
+
+
+int count_bits(int val)
+{
+	int i = 0;
+	int count = 0;
+	
+	for (i = 0; i < (sizeof(int) * 8); i++) {
+		if (val & 1) {
+			count++;
+		}
+		val = val << 1
+	}
+
+	return count;
+}
+
+
+vlan tag:
+vlan tag Id | pri | CFI | Vlan iD
+2 bytes      3bits  1bits  12bits
+
+
+blocking, listening, learning, forwardning.
+
+
+struct node {
+	struct node *prev;
+	struct node *next;
+	int data;
+}
+
+
+n -- nLL 
+p - NULL
+3
+
+1 --> 3
+  1 <<<  3
+1 2 3 4
+
+int delete_node(strcut node **list, int data)
+{
+	struct node *ptr = NULL;
+	
+	if(*list == NULL) {
+		return -1; //Invalid List 
+	}
+	
+	ptr = *list;
+	
+	while(ptr != NULL) {
+		if (ptr->data == data) {
+			if (ptr->prev) {
+				ptr->prev->next = ptr->next;
+			}
+			
+			if (ptr->next) {
+				ptr->next->prev = ptr->prev;
+			}
+			
+			free(ptr);
+			ptr = NULL;
+			break;
+		}
+		ptr = ptr->next;
+	}
+	
+	return 0;
+}
+
+
+1 >> 2 >> 3 >> 4
+
+reverse_list(list, NULL);
+
+int reverse_list(struct node **node, strcut **next)
+{
+	struct node *tmp = NULL;
+	struct node *ptr = NULL;
+	
+	ptr = *list;
+
+
+	if (*node != NULL) {
+		reverse_list(node->next, node);
+	}
+	
+	
+	
+}
+
+
+int main()
+{
+
+	fork();	
+	fork();
+	
+}
+
 ```
